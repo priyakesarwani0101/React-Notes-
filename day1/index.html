@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React</title>
+    <link rel="stylesheet" href="index.css">
    <!-- These two src links have been taken from CDN(Content Delivery Network) links to load to react and react-dom in our file -->
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -13,14 +14,6 @@
     <div id="root">Not Rendered</div>
 </body>
 
-<script>
-    //lets create an element with the help of react library:
-    const heading = React.createElement("h1",{
-        id:"heading"
-    },"Hello React");
+<script src="app.js"></script>
 
-
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(heading);
-</script>
 </html>
