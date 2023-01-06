@@ -1,0 +1,3 @@
+package-lock-json is very important file. It stores all the important information of the dependencies which
+we have installed to create our app. It locks the version of the dependencies which is useful at production level.
+We should not put it in git-ignore file.

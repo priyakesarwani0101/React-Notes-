@@ -1,0 +1,90 @@
+1> call apply and bind??
+
+answer==>
+call apply and bind are normal javascript function which is helpful in borrowing the predefined function in a object.
+example:
+let name = {
+    f_name: "Priya",
+    l_name: "kesarwani"
+}
+
+let printFullName = function(hometown,state){
+    console.log(this.f_name+" "+this.l_name);
+}
+
+let name2 = {
+     f_name: "Sonali",
+    l_name: "kesarwani"
+}
+
+printFullName.call(name2,"Pratapgarh","UP");
+printFullName.apply(name2,["Pratapgarh","UP"]);
+printMyName = printFullName.bind(name2,"Pratapgarh","UP");
+printMyName();
+
+In call method we pass the arguments individually but in apply method we pass arguments in array.
+In bind method, instead of directly calling the method, it returns the copy of the menthod.
+
+
+
+2>  readFile vs readSyncFile??
+
+In readFile, we read the file in non-blocking asynchronous way but in readSyncFile, file is read synchoronously.
+
+
+3>  process in node.js??
+process is a object, which provides the information about the current node.js . there are several method available 
+in the process object.
+
+
+4> node.js??
+node.js is an open-source server environment or we can say that node.js is a back-end javascript runtime environment
+which runs on v8 engine without a web browser.
+
+5> js in browser vs node.js???
+browser.js is mainly used for client side application  while in case of nodejs javascript code gets executed outside
+the browser as it is an interpreter as well as environment for running js and used for server side application.
+
+
+6 > 3 ways to reverse string in js??
+
+inbuild method>.
+
+let name = "Priya"
+var split = name.split("");  //["P","r","i","y","a"];
+var reverse = split.reverse(); //["a","y","i","r","P"];
+var join = reverse.join(""); // "ayirP"
+
+iteratively>.
+
+
+we can do this by loop
+
+
+recursively>.
+
+fn reverse(str){
+    if(str===""){
+        return "";
+    }else{
+        return reverse(str.substr(1)) + str.charAt(0);
+    }
+}
+
+reverse("priya");
+
+
+7>. compare two obj ???
+
+let obj1 = {
+    name:"Priya"
+}
+let obj2 = {
+    name:"Priya"
+}
+
+obj1 === obj2 // false;
+
+
+8>. shallow equal??
+ it is a function for performing a shallow comparison between two objects or arrays
